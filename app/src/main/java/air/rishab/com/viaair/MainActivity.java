@@ -18,11 +18,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import org.altbeacon.beacon.BeaconManager;
 
 public class MainActivity extends AppCompatActivity {
 
+    static ImageView iv;
     public void qrScanner(View v){
         Intent i = new Intent(this,QRScanner.class);
         startActivity(i);
@@ -34,8 +37,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void webview(View view){
+        Intent i = new Intent(this,web.class);
+        startActivity(i);
+    }
+
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
-    Button scan,capture;
+    static Button scan;
+    TextView capture;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -44,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
          scan = (Button) findViewById(R.id.buttonScan);
-         capture = (Button) findViewById(R.id.buttonMaps);
+         capture = (TextView) findViewById(R.id.buttonMaps);
 
         verifyBluetooth();
 
@@ -69,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        iv = (ImageView) findViewById(R.id.imageView2);
         startService(new Intent(this,BBeacon.class));
         Log.i("yo", "onCreate: starting service");
         startService(new Intent(this,Gorientation.class));

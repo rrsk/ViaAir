@@ -43,10 +43,10 @@ public class BBeacon extends Service implements BeaconConsumer {
 //                    b.getTxPower();
 
                        Log.i("RSSI", String.valueOf(b.getRssi()));
-                       if (b.getRssi() < -70) {
+
                            var.Bdegree = Integer.parseInt(b.getId2().toString());
                            var.beacon = b.getId1().toString();
-                       }
+                       
                        Log.i("id1: ", b.getId1().toString());
                        Log.i("id2: ", b.getId2().toString());
                        Log.i("id3: ", b.getId3().toString());

@@ -3,6 +3,7 @@
     package="air.rishab.com.viaair">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -21,8 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QRScanner"></activity>
-        <activity android:name=".CameraOverlayExample"></activity>
+        <activity android:name=".QRScanner" />
+        <activity android:name=".CameraOverlayExample" />
+        <activity android:name=".web"></activity>
     </application>
 
 </manifest>
