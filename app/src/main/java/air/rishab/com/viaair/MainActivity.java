@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+// my contribution is somewhat essential ?
+
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
     static Button scan;
     TextView capture;

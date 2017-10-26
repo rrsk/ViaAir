@@ -42,6 +42,8 @@ public class CameraOverlayExample extends Activity implements SurfaceHolder.Call
         setContentView(R.layout.activity_camera_overaly);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
+        // my contribution :)
+
         getWindow().setFormat(PixelFormat.UNKNOWN);
         surfaceView = (SurfaceView)findViewById(R.id.camerapreview);
         surfaceHolder = surfaceView.getHolder();
